@@ -29,8 +29,13 @@
   "dependencies": {
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
-    "mysql2": "^1.6.4",
     "if-env": "^1.0.4",
+<<<<<<< HEAD
+=======
+    "mysql2": "^1.6.4",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^2.0.0",
+>>>>>>> master
     "sequelize": ">=5.3.0"
   }
 }
