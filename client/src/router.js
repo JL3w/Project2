@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from '@/views/Home';
-import Example from '@/views/Example';
+import Home from '@/components/Home';
 import Register from '@/components/Register';
 import Login from '@/components/Login';
 import Loadouts from '@/components/Loadouts';
@@ -39,7 +38,7 @@ export default new Router({
       component: CreateLoadout
     },
     {
-      path: '/loadouts/id',
+      path: '/loadouts/:loadoutId',
       name: 'details',
       component: Details
     }

@@ -1,31 +1,23 @@
 <template>
-  <div class="container" id="detail">
+  <div class="container" id="home">
+    <Header />
     <NewLoadout />
-    <!-- <Header />
-    <ItemCarousel />
-    <Description />
-    <RatingStars />
-    <CommentSect />
-    <Footer /> -->
+    <Footer />
   </div>
 </template>
 
 <script>
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import ItemCarousel from '@/components/ItemCarousel';
-import Description from '@/components/Description';
-import RatingStars from '@/components/RatingStars';
-import CommentSect from '@/components/CommentSect';
-
+import { getExamples, saveExample, deleteExample } from '@/services/api';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default {
-  name: 'detail',
+  name: 'home',
   components: {
-      Header, 
-      Footer,
+    Header,
+    Footer
   },
-    data: function() {
+  data: function() {
     return {
       example: {
         text: '',
@@ -34,9 +26,11 @@ export default {
       examples: []
     }
   },
+
   created: function() {
     this.refreshExamples();
   },
+
   methods: {
     // refreshExamples gets new examples from the db and repopulates the list
     refreshExamples: function() {
@@ -46,6 +40,7 @@ export default {
         }.bind(this)
       );
     },
+
     // handleFormSubmit is called whenever we submit a new example
     // Save the new example to the db and refresh the list
     handleFormSubmit: function() {
@@ -53,6 +48,7 @@ export default {
         alert("You must enter an example text and description!");
         return;
       }
+
       saveExample(this.example).then(
         function() {
           this.example.text = "";
@@ -61,6 +57,7 @@ export default {
         }.bind(this)
       );
     },
+
     // handleDeleteBtnClick is called when an example's delete button is clicked
     // Remove the example from the db and refresh the list
     handleDeleteBtnClick: function(idToDelete) {
@@ -72,7 +69,6 @@ export default {
     }
   }
 }
-
 </script>
 
 <style>

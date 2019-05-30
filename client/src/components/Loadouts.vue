@@ -12,7 +12,7 @@
                 large >
 
             <v-icon>add</v-icon>
-        </v-btn>
+            </v-btn>
             <div v-for="loadout in loadouts" :key="loadout.title">
 
                 <Panel :title='loadout.activity'>
@@ -21,9 +21,9 @@
 
                 <!-- LIST NOT WORKING -->
 
-                    <ul v-for="item in loadout.items" :key="loadout.items">
-                        <li>{{loadout.items.itemName}}</li>
-                    </ul>
+                    <div v-for="item in loadout.items" :key="item.itemName">
+                        <p>{{item.itemName}}</p>
+                    </div>
 
                     <v-btn class="deep-orange darken-3" @click="navigateTo({name: 'details'})" dark>View Details</v-btn>
 
@@ -68,21 +68,48 @@ export default {
                     title: 'Test',
                     activity: 'Golf',
                     description: 'I suck at golf.  Why do I continue to embarass myself by playing?  It is a stupid game for old people!',
-                    items: ['Driver', 'Putter', 'Irons'],
+                    items: [
+                        {
+                            itemName: 'Driver'
+                        }, 
+                        {
+                            itemName: 'Putter'
+                        }, 
+                        {
+                            itemName: 'Irons'
+                        }],                    
                     images: []
                 },
                 {
                     title: 'Test',
                     activity: 'Golf',
                     description: 'I suck at golf.  Why do I continue to embarass myself by playing?  It is a stupid game for old people!',
-                    items: ['Driver', 'Putter', 'Irons'],
+                    items: [
+                        {
+                            itemName: 'Driver'
+                        }, 
+                        {
+                            itemName: 'Putter'
+                        }, 
+                        {
+                            itemName: 'Irons'
+                        }],                    
                     images: []
                 },
                 {
                     title: 'Test',
                     activity: 'Golf',
                     description: 'I suck at golf.  Why do I continue to embarass myself by playing?  It is a stupid game for old people!',
-                    items: ['Driver', 'Putter', 'Irons'],
+                    items: [
+                        {
+                            itemName: 'Driver'
+                        }, 
+                        {
+                            itemName: 'Putter'
+                        }, 
+                        {
+                            itemName: 'Irons'
+                        }],                    
                     images: []
                 }
             ]
@@ -100,5 +127,7 @@ export default {
 </script>
 
 <style scoped>
-
+    p {
+        justify-content: left;
+    }
 </style>
