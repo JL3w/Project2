@@ -1,7 +1,7 @@
 <template>
-   <v-toolbar fixed class="cyan" dark>
+   <v-toolbar fixed class="deep-orange darken-3" dark>
        <v-toolbar-title class="mr-4">
-           <span @click="navigateTo({name: 'root'})">
+           <span class="home" @click="navigateTo({name: 'root'})">
                 Loadout
            </span>
        </v-toolbar-title>
@@ -15,17 +15,24 @@
        <v-spacer></v-spacer>
 
        <v-toolbar-items>
-           <v-btn flat dark @click="navigateTo({name: 'sign-in'})">
-               Sign In
-           </v-btn>
+           <v-btn flat dark
+                @click="navigateTo({name: 'login'})">
+                Login
+            </v-btn>
+            <v-btn flat dark
+                @click="navigateTo({name: 'register'})">
+                Sign Up
+            </v-btn>
        </v-toolbar-items>
    </v-toolbar>
 </template>
 
 <script>
 export default {
-    name: "Header",
     methods: {
+
+        // NOT WORKING //
+
         navigateTo (route) {
             this.$router.push(route)
         }
@@ -34,4 +41,11 @@ export default {
 </script>
 
 <style scoped>
+    .home {
+        cursor: pointer;
+    }
+
+    .home:hover {
+        font-weight: bolder;
+    }
 </style>

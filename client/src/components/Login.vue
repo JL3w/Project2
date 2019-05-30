@@ -3,7 +3,7 @@
         <v-flex>
             <div class="white elevation-2">
                 <v-toolbar flat dense class="deep-orange darken-3" dark>
-                    <v-toolbar-title>Register</v-toolbar-title>
+                    <v-toolbar-title>Login</v-toolbar-title>
                 </v-toolbar>
 
                 <div class="pl-4 pr-4 pt-2 pb-2">
@@ -22,7 +22,7 @@
                 
                     <div v-html="error" class="error" />
                     
-                    <v-btn class="deep-orange darken-3" @click="register" dark>Register</v-btn>
+                    <v-btn class="deep-orange darken-3" @click="login" dark>Login</v-btn>
                 </div>
             </div>
         </v-flex>
@@ -40,7 +40,7 @@ export default {
         }
     },
     methods: {
-        async register () {
+        async login () {
 
             // SERVER CODE GOES HERE //
            
@@ -57,5 +57,4 @@ export default {
     .error {
         color: red;
     }
-
 </style>

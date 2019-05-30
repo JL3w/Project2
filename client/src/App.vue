@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <v-app dark>
-      <!-- <Header /> -->
+      <Header />
+      <br><br><br>
       <v-content>
         <v-container fluid>
           <router-view />
@@ -28,6 +29,6 @@ export default {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
   }
+  
 </style>
