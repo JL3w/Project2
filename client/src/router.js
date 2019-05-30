@@ -4,6 +4,7 @@ import Home from '@/views/Home';
 import Example from '@/views/Example';
 import Register from '@/components/Register';
 import Login from '@/components/Login';
+import Loadouts from '@/components/Loadouts';
 import NewLoadout from '@/views/NewLoadout';
 
 
@@ -25,6 +26,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/loadouts',
+      name: 'loadouts',
+      component: Loadouts
     }
     // {
     //   path: '/example/:id',
