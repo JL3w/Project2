@@ -17,6 +17,10 @@ if (process.env.NODE_ENV === "production") {
 
 // Routes
 require("./routes/apiRoutes")(app);
+require("./routes/gearRoutes")(app);  
+require("./routes/sportRoutes")(app);
+require("./routes/profileRoutes")(app);
+require("./routes/loadoutRoutes")(app);
 
 var syncOptions = { force: false };
 
