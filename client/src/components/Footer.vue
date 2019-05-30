@@ -1,9 +1,16 @@
 <template>
-    <div class="container" id="Footer">
-        <nav class="navbar fixed-bottom navbar-light bg-light justify-content-center">
-            <span class="navbar-text">Prestige Worldwide 2019</span>
-        </nav>
-    </div>
+    <v-footer dark absolute class="deep-orange darken-3">
+        <v-flex
+        deep-orange
+        darken-3
+        py-3
+        text-xs-center
+        white--text
+        xs12
+        >
+            2019 — <strong>Prestige Worldwide</strong>
+        </v-flex>
+    </v-footer>
 </template>
 
 <script>
