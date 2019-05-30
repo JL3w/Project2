@@ -1,17 +1,37 @@
 <template>
   <div id="app">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-
-    <router-view/>
+    <v-app dark>
+      <Header />
+      <br><br><br>
+      <v-content>
+        <v-container fluid>
+          <router-view />
+        </v-container>
+      </v-content>
+      <br>
+      <Footer />
+    </v-app>
   </div>
 </template>
 
 <script>
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+
 export default {
+  name: 'app',
+  components: {
+    Header,
+    Footer
+  }
   
 }
 </script>
 
 <style>
-
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: #2c3e50;
+  }
 </style>
