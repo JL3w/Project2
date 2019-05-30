@@ -8,18 +8,6 @@ module.exports = function(app) {
     });
   });
 
-  //   app.get("/api/gears/:id", function(req, res) {
-  //     db.Gear.findOne({
-  //       where: {
-  //         id: req.params.id
-  //       }
-  //     }).then(
-  //       function(dbGear) {
-  //         res.json(dbGear);
-  //       }
-  //     );
-  //   });
-
   app.post("/api/gears", function(req, res) {
     db.Gear.create({
       name: req.body.name,
