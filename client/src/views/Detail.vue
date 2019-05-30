@@ -1,11 +1,12 @@
 <template>
   <div class="container" id="detail">
-    <Header />
+    <NewLoadout />
+    <!-- <Header />
     <ItemCarousel />
     <Description />
     <RatingStars />
     <CommentSect />
-    <Footer />
+    <Footer /> -->
   </div>
 </template>
 
@@ -23,6 +24,7 @@ export default {
   components: {
       Header, 
       Footer,
+      NewLoadout
   },
     data: function() {
     return {

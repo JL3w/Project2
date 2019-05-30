@@ -1,7 +1,7 @@
 <template>
   <div class="container" id="home">
     <Header />
-    <LoadoutCard />
+    <NewLoadout />
     <Footer />
   </div>
 </template>
@@ -11,13 +11,15 @@ import { getExamples, saveExample, deleteExample } from '@/services/api';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import LoadoutCard from '@/components/LoadoutCard';
+import NewLoadout from '@/views/NewLoadout';
 
 export default {
   name: 'home',
   components: {
     Header,
     Footer,
-    LoadoutCard
+    LoadoutCard,
+    NewLoadout
 
   },
   data: function() {
