@@ -1,22 +1,35 @@
 <template>
      <v-layout column>
         <v-flex>
+            <v-btn class="light-green accent-4 mb-3 mr-3" 
+                slot="action"
+                @click="navigateTo({name: 'create'})" 
+                dark 
+                fab
+                fixed
+                bottom
+                right
+                large >
+
+            <v-icon>add</v-icon>
+        </v-btn>
             <div v-for="loadout in loadouts" :key="loadout.title">
-                <!-- ASK ABOUT CHANGING PANEL TITLE -->
-                <Panel title="Loadout Title">
-                    <h2>{{loadout.activity}}</h2>
+
+                <Panel :title='loadout.activity'>
+                    <h2>{{loadout.title}}</h2>
                     <p>{{loadout.description}}</p>
-                    {{loadout.items}}
+
+                <!-- LIST NOT WORKING -->
+
+                    <ul v-for="item in loadout.items" :key="loadout.items">
+                        <li>{{loadout.items.itemName}}</li>
+                    </ul>
+
+                    <v-btn class="deep-orange darken-3" @click="navigateTo({name: 'details'})" dark>View Details</v-btn>
+
                 </Panel>
                 <br>
             </div>
-            <!-- <Panel title="Loadouts">
-                <div v-for="loadout in loadouts" :key="loadout.title">
-                    <h3>{{loadout.title}}</h3>
-                    <h5>{{loadout.activity}}</h5>
-                    {{loadout.items}}
-                </div>
-            </Panel> -->
         </v-flex>
     </v-layout>
 </template>
@@ -39,7 +52,16 @@ export default {
                     title: 'Summer Gear',
                     activity: 'Fly Fishing',
                     description: 'A brief description of my gear and what I use it for',
-                    items: ['TFO 5/6, 9ft', 'Simms Freestone Waders', 'Simms Freestone Boots'],
+                    items: [
+                        {
+                            itemName: 'TFO 5/6, 9ft'
+                        }, 
+                        {
+                            itemName: 'Simms Freestone Waders'
+                        }, 
+                        {
+                            itemName: 'Simms Freestone Boots'
+                        }],
                     images: []
                 },
                 {
@@ -48,9 +70,27 @@ export default {
                     description: 'I suck at golf.  Why do I continue to embarass myself by playing?  It is a stupid game for old people!',
                     items: ['Driver', 'Putter', 'Irons'],
                     images: []
-
+                },
+                {
+                    title: 'Test',
+                    activity: 'Golf',
+                    description: 'I suck at golf.  Why do I continue to embarass myself by playing?  It is a stupid game for old people!',
+                    items: ['Driver', 'Putter', 'Irons'],
+                    images: []
+                },
+                {
+                    title: 'Test',
+                    activity: 'Golf',
+                    description: 'I suck at golf.  Why do I continue to embarass myself by playing?  It is a stupid game for old people!',
+                    items: ['Driver', 'Putter', 'Irons'],
+                    images: []
                 }
             ]
+        }
+    },
+    methods: {
+         navigateTo (route) {
+            this.$router.push(route)
         }
     },
     mounted () {

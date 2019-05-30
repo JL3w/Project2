@@ -24,7 +24,6 @@ export default {
   components: {
       Header, 
       Footer,
-      NewLoadout
   },
     data: function() {
     return {
