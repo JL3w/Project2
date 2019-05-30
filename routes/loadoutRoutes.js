@@ -9,7 +9,7 @@ module.exports = function(app) {
 
   app.post("/api/loadouts", function(req, res) {
     db.Loadout.create({
-      comments: req.body.comments, 
+      // comment: req.body.comment, 
       rating: req.body.rating
     }).then(function(dbLoadout) {
       res.json(dbLoadout);
