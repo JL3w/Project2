@@ -17,7 +17,7 @@
 
        <v-toolbar-items>
            <v-btn flat dark
-                @click="navigateTo({name: 'login'})">
+                @click.prevent="login">
                 Login
             </v-btn>
             <v-btn flat dark
@@ -31,14 +31,30 @@
 <script>
 export default {
     methods: {
-
-        // NOT WORKING //
-
-        navigateTo (route) {
-            this.$router.push(route)
-        }
+    
+    // NOT WORKING //
+    navigateTo (route) {
+        this.$router.push(route)
+        },
+    login() {
+      this.$auth.login();
+    },
+    logout() {
+      this.$auth.logOut();
+      this.$router.push({ path: "/" });
+    },
+    handleLoginEvent(data) {
+      this.isAuthenticated = data.loggedIn;
+      this.profile = data.profile;
     }
-}
+  },
+  data() {
+    return {
+      isAuthenticated: false,
+      profile: {}
+    };
+  }
+};
 </script>
 
 <style scoped>

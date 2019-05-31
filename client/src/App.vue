@@ -17,7 +17,7 @@
 <script>
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-
+import "jquery";
 export default {
   name: 'app',
   components: {
