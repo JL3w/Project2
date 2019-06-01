@@ -2,7 +2,7 @@
   <div id="app">
     <v-app dark>
       <Header />
-      <br><br><br>
+      <br><br>
       <v-content>
         <v-container fluid>
           <router-view />
