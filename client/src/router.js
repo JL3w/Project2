@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Register from '@/components/Register';
+import Home from '@/components/Home';
 import Login from '@/components/Login';
 import Loadouts from '@/components/Loadouts';
 import CreateLoadout from '@/components/CreateLoadout';
