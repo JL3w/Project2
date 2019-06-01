@@ -17,6 +17,7 @@
 
 <script>
 import Panel from '@/components/Panel'
+import Loadouts from '@/components/Loadouts'
 
 export default {
     data () {
@@ -25,7 +26,8 @@ export default {
         }
     },
     components: {
-        Panel
+        Panel,
+        Loadouts
     }
     
 // SERVER CODE GOES HERE //
