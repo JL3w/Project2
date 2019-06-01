@@ -6,7 +6,7 @@ import Login from '@/components/Login';
 import Loadouts from '@/components/Loadouts';
 import CreateLoadout from '@/components/CreateLoadout';
 import Details from '@/components/Details';
-
+import Callback from './components/Callback';
 
 Vue.use(Router);
 
@@ -15,7 +15,7 @@ export default new Router({
     {
       path: '/',
       name: 'root',
-      component: app
+      component: Home
     },
     {
       path: '/register',
@@ -41,6 +41,11 @@ export default new Router({
       path: '/loadouts/:loadoutId',
       name: 'details',
       component: Details
-    }
+    },
+    {
+      path: '/:token',
+      name: 'callback',
+      component: Callback
+    },
   ]
 });

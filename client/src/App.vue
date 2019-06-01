@@ -2,7 +2,7 @@
   <div id="app">
     <v-app dark>
       <Header />
-      <br><br><br>
+      <br><br>
       <v-content>
         <v-container fluid>
           <router-view />
@@ -17,15 +17,39 @@
 <script>
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import "jquery";
 
 export default {
   name: 'app',
   components: {
     Header,
     Footer
+  },
+  data() {
+    return {
+      isAuthenticated: false
+    };
+  },
+  async created() {
+    try {
+      await this.$auth.renewTokens();
+    } catch (e) {
+      console.log(e);
+    }
+  },
+  methods: {
+    login() {
+      this.$auth.login();
+    },
+    logout() {
+      this.$auth.logOut();
+    },
+    handleLoginEvent(data) {
+      this.isAuthenticated = data.loggedIn;
+      this.profile = data.profile;
+    }
   }
-  
-}
+};
 </script>
 
 <style>
