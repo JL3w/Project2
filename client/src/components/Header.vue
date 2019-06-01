@@ -28,9 +28,11 @@
                 @click.prevent="logout">
                 Log out
             </v-btn>
-            <v-btn flat dark
-                @click="navigateTo({name: 'register'})">
-                Sign Up
+            <v-btn 
+                v-if="isAuthenticated"
+                flat dark
+                @click="navigateTo({name: 'Profile'})">
+                Profile
             </v-btn>
        </v-toolbar-items>
    </v-toolbar>

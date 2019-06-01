@@ -1,14 +1,15 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from '@/components/Home';
 import Register from '@/components/Register';
 import Login from '@/components/Login';
 import Loadouts from '@/components/Loadouts';
 import CreateLoadout from '@/components/CreateLoadout';
 import Details from '@/components/Details';
 import Callback from './components/Callback';
+import Profile from "./components/Profile.vue";
 
 Vue.use(Router);
+
 
 export default new Router({
   routes: [
@@ -16,11 +17,6 @@ export default new Router({
       path: '/',
       name: 'root',
       component: app
-    },
-    {
-      path: '/register',
-      name: 'register',
-      component: Register
     },
     {
       path: '/login',
@@ -46,6 +42,11 @@ export default new Router({
       path: '/:token',
       name: 'callback',
       component: Callback
+    },
+    {
+      path: "/profile",
+      name: "Profile",
+      component: Profile
     },
   ]
 });
