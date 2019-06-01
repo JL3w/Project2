@@ -13,7 +13,7 @@
           Explore Loadouts
   </v-btn>
     
-  <v-carousel mb-100>
+  <v-carousel mb-100 hide-delimiters>
     <v-carousel-item
       v-for="(item,i) in items"
       :key="i"
