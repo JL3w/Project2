@@ -20,10 +20,6 @@
                 @click="navigateTo({name: 'login'})">
                 Login
             </v-btn>
-            <v-btn flat dark
-                @click="navigateTo({name: 'register'})">
-                Sign Up
-            </v-btn>
        </v-toolbar-items>
    </v-toolbar>
 </template>
@@ -31,8 +27,6 @@
 <script>
 export default {
     methods: {
-
-        // NOT WORKING //
 
         navigateTo (route) {
             this.$router.push(route)

@@ -1,78 +1,81 @@
 <template>
-  <div class="container" id="home">
-    <Header />
-    <NewLoadout />
-    <Footer />
-  </div>
+<div dark>
+  <h1>Welcome to Loadout!</h1>
+  <h4>A place to share what you use for your favorite activities.</h4>
+  <br>
+  <v-btn id="button" class="deep-orange darken-3" 
+          @click="navigateTo({name: 'loadouts'})" 
+          dark 
+          relative
+          center
+          bottom
+          large>
+          Explore Loadouts
+  </v-btn>
+    
+  <v-carousel mb-100>
+    <v-carousel-item
+      v-for="(item,i) in items"
+      :key="i"
+      :src="item"
+  ></v-carousel-item>
+  </v-carousel>
+  <br>
+  <br>
+  
+</div>
 </template>
 
 <script>
-import { getExamples, saveExample, deleteExample } from '@/services/api';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Panel from '@/components/Panel'
 
 export default {
-  name: 'home',
-  components: {
-    Header,
-    Footer
-  },
-  data: function() {
-    return {
-      example: {
-        text: '',
-        description: ''
-      },
-      examples: []
-    }
-  },
+    data () {
+        return {
+          items: [
 
-  created: function() {
-    this.refreshExamples();
-  },
+              'https://images.unsplash.com/photo-1550344681-a4572846afca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80'
+            ,
+              'https://images.unsplash.com/photo-1504671496180-901d79454749?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
+            ,
+              'https://images.unsplash.com/photo-1550621495-867172e70d66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
+            ,
+              'https://images.unsplash.com/photo-1554235166-d457d06a27ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
+            ,
+            'https://cdn.pixabay.com/photo/2014/12/20/09/18/running-573762_1280.jpg'
+            ,
+            'https://images.unsplash.com/photo-1530028828-25e8270793c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'
+            ,
+            'https://cdn.pixabay.com/photo/2015/11/16/06/20/baseball-player-1045263_1280.jpg'
+            
 
-  methods: {
-    // refreshExamples gets new examples from the db and repopulates the list
-    refreshExamples: function() {
-      getExamples().then(
-        function(data) {
-          this.examples = data;
-        }.bind(this)
-      );
+          ]
+        }
     },
-
-    // handleFormSubmit is called whenever we submit a new example
-    // Save the new example to the db and refresh the list
-    handleFormSubmit: function() {
-      if (!this.example.text || !this.example.description) {
-        alert("You must enter an example text and description!");
-        return;
-      }
-
-      saveExample(this.example).then(
-        function() {
-          this.example.text = "";
-          this.example.description = "";
-          this.refreshExamples();
-        }.bind(this)
-      );
+    components: {
+        Panel
     },
+    methods: {
 
-    // handleDeleteBtnClick is called when an example's delete button is clicked
-    // Remove the example from the db and refresh the list
-    handleDeleteBtnClick: function(idToDelete) {
-      deleteExample(idToDelete).then(
-        function() {
-          this.refreshExamples();
-        }.bind(this)
-      );
+        navigateTo (route) {
+            this.$router.push(route)
+        }
     }
-  }
+    
+// SERVER CODE GOES HERE //
+
 }
 </script>
 
-<style>
-.list-group-item {
-  line-height: 2.5;
-}
+<style scoped>
+  h1 {
+    color: white;
+    font-size: 75px;
+  }
+  h4 {
+    color: white;
+  }
+  #button {
+    z-index: 100;
+  }
 </style>
