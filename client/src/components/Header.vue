@@ -16,9 +16,17 @@
        <v-spacer></v-spacer>
 
        <v-toolbar-items>
-           <v-btn flat dark
+           <v-btn 
+                v-if="!isAuthenticated"
+                flat dark
                 @click.prevent="login">
                 Login
+            </v-btn>
+            <v-btn 
+                v-if="isAuthenticated"
+                flat dark
+                @click.prevent="logout">
+                Log out
             </v-btn>
             <v-btn flat dark
                 @click="navigateTo({name: 'register'})">
@@ -30,30 +38,28 @@
 
 <script>
 export default {
-    methods: {
-    
-    // NOT WORKING //
-    navigateTo (route) {
+  name: "Header",
+  methods: {
+    navigateTo(route) {
         this.$router.push(route)
-        },
+    },
     login() {
       this.$auth.login();
     },
     logout() {
       this.$auth.logOut();
-      this.$router.push({ path: "/" });
     },
     handleLoginEvent(data) {
       this.isAuthenticated = data.loggedIn;
       this.profile = data.profile;
     }
   },
-  data() {
+    data() {
     return {
       isAuthenticated: false,
       profile: {}
     };
-  }
+  },
 };
 </script>
 

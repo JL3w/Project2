@@ -6,11 +6,9 @@ import { sync } from 'vuex-router-sync'
 import 'vuetify/dist/vuetify.min.css'
 import AuthPlugin from "./plugins/auth";
 
-Vue.config.productionTip = false
 
 Vue.use(Vuetify)
 Vue.use(AuthPlugin);
-
 
 
 new Vue({
