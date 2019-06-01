@@ -1,6 +1,7 @@
 <template>
     <v-layout column>
         <v-flex>
+            <br>
             <Panel title="New Loadout">
                 <br>
                 <v-text-field light
