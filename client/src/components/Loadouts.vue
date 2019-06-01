@@ -70,7 +70,7 @@ export default {
                         }]
                 },
                 {
-                    title: 'Test',
+                    title: 'Test3',
                     activity: 'Golf',
                     description: 'I suck at golf.  Why do I continue to embarass myself by playing?  It is a stupid game for old people!',
                     items: [
@@ -88,7 +88,7 @@ export default {
                         }]                  
                 },
                 {
-                    title: 'Test',
+                    title: 'Test2',
                     activity: 'Golf',
                     description: 'I suck at golf.  Why do I continue to embarass myself by playing?  It is a stupid game for old people!',
                     items: [
@@ -106,7 +106,7 @@ export default {
                         }]                    
                 },
                 {
-                    title: 'Test',
+                    title: 'Test1',
                     activity: 'Golf',
                     description: 'I suck at golf.  Why do I continue to embarass myself by playing?  It is a stupid game for old people!',
                     items: [

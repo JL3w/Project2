@@ -34,9 +34,7 @@ export default {
     },
     methods: {
         async login () {
-
-            // SERVER CODE GOES HERE //
-           
+        this.$auth.login();
         }
     },
     components: {
