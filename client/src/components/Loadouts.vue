@@ -44,6 +44,7 @@
 import Panel from '@/components/Panel';
 
 export default {
+    name: "Loadouts",
     components: {
         Panel
     },

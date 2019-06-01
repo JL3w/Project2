@@ -28,6 +28,12 @@
                 @click.prevent="logout">
                 Log out
             </v-btn>
+            <v-btn 
+                v-if="isAuthenticated"
+                flat dark
+                @click="navigateTo({name: 'Profile'})">
+                Profile
+            </v-btn>
        </v-toolbar-items>
    </v-toolbar>
 </template>
