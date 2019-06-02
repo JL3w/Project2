@@ -1,8 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
-  var Loadout = sequelize.define("Loadout", {
+  let Loadout = sequelize.define("Loadout", {
     name: DataTypes.STRING,
     sport: DataTypes.STRING,
-    description: DataTypes.TEXT,
+    description: DataTypes.TEXT
+    // defaultvalue: 
   });
 
   Loadout.associate = (models) => {
