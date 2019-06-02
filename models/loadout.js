@@ -1,7 +1,15 @@
 module.exports = function(sequelize, DataTypes) {
-  var Loadout = sequelize.define("Loadout", {
-    // comment: DataTypes.STRING,
-    rating: DataTypes.DECIMAL
+  let Loadout = sequelize.define("Loadout", {
+    name: DataTypes.STRING,
+    sport: DataTypes.STRING,
+    description: DataTypes.TEXT
+    // defaultvalue: 
   });
+
+  Loadout.associate = (models) => {
+    Loadout.hasMany(models.Gear);
+  };
+
+
   return Loadout;
 };
