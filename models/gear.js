@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Gear = sequelize.define("Gear", {
+  let Gear = sequelize.define("Gear", {
     name: DataTypes.STRING,
     // description: DataTypes.TEXT,
     imgUrl: DataTypes.TEXT
@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
   //   });
   // };
   Gear.associate = (models) => {
-    Gear.belongsTo(models.Loadout);
+    Gear.belongsTo(models.Loadout); 
   };
   return Gear;
 };

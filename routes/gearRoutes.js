@@ -10,9 +10,11 @@ module.exports = function(app) {
 
   app.post("/api/gears", function(req, res) {
     db.Gear.create({
+      LoadoutId: req.body.loadoutId,
       name: req.body.name,
       // description: req.body.description,
-      imgUrl: req.body.imgUrl
+      imgUrl: req.body.imgUrl,
+      // loadoutId: req.body.LoadoutId
       // productUrl: req.body.productUrl,
       // rating: req.body.rating
     }).then(function(dbGear) {
