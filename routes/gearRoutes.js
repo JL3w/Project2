@@ -11,10 +11,10 @@ module.exports = function(app) {
   app.post("/api/gears", function(req, res) {
     db.Gear.create({
       name: req.body.name,
-      description: req.body.description,
-      imgUrl: req.body.imgUrl,
-      productUrl: req.body.productUrl,
-      rating: req.body.rating
+      // description: req.body.description,
+      imgUrl: req.body.imgUrl
+      // productUrl: req.body.productUrl,
+      // rating: req.body.rating
     }).then(function(dbGear) {
       res.json(dbGear);
     });

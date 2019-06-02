@@ -15,6 +15,8 @@ module.exports = function(sequelize, DataTypes) {
   //     }
   //   });
   // };
-  Gear.belongsTo(Loadout);
+  Gear.associate = (models) => {
+    Gear.belongsTo(models.Loadout);
+  };
   return Gear;
 };

@@ -5,12 +5,10 @@ module.exports = function(sequelize, DataTypes) {
     description: DataTypes.TEXT,
   });
 
-  // creates an association that deletes the gear from the table when the loadout gets deleted
-  Loadout.associate = function(models) {
-    Loadout.hasMany(models.Gear, {
-      onDelete: "cascade"
-    });
+  Loadout.associate = (models) => {
+    Loadout.hasMany(models.Gear);
   };
-  Loadout.hasMany(Gear);
+
+
   return Loadout;
 };
