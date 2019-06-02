@@ -1,11 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Register from '@/components/Register';
 import Home from '@/components/Home';
-import Login from '@/components/Login';
 import Loadouts from '@/components/Loadouts';
 import CreateLoadout from '@/components/CreateLoadout';
-import Details from '@/components/Details';
 import Callback from './components/Callback';
 import Profile from "./components/Profile.vue";
 
@@ -20,11 +17,6 @@ export default new Router({
       component: Home
     },
     {
-      path: '/login',
-      name: 'login',
-      component: Login
-    },
-    {
       path: '/loadouts',
       name: 'loadouts',
       component: Loadouts
@@ -33,11 +25,6 @@ export default new Router({
       path: '/loadouts/create',
       name: 'create',
       component: CreateLoadout
-    },
-    {
-      path: '/loadouts/:loadoutId',
-      name: 'details',
-      component: Details
     },
     {
       path: '/:token',

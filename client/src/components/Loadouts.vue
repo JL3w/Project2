@@ -31,9 +31,8 @@
                         </v-carousel-item>
                     </v-carousel>
 
-                    <v-btn class="deep-orange darken-3" @click="navigateTo({name: 'details'})" dark>View Details</v-btn>
-
                 </Panel>
+
                 <br>
             </div>
         </v-flex>
@@ -131,7 +130,7 @@ export default {
         }
     },
     methods: {
-         navigateTo (route) {
+        navigateTo (route) {
             this.$router.push(route)
         }
     },
