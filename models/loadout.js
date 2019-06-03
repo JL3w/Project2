@@ -2,8 +2,7 @@ module.exports = function(sequelize, DataTypes) {
   let Loadout = sequelize.define("Loadout", {
     name: DataTypes.STRING,
     sport: DataTypes.STRING,
-    description: DataTypes.TEXT,
-    userID: DataTypes.STRING
+    description: DataTypes.TEXT
     // defaultvalue: 
   });
 
