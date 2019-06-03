@@ -27,12 +27,13 @@
                             :src="item.image"
                         >
                             <br>
-                            <h3 class="item-name">{{item.itemName}}</h3>
+                            <h3 style="color: white">{{item.itemName}}</h3>
                         </v-carousel-item>
                     </v-carousel>
 
-                </Panel>
+                    <v-btn class="deep-orange darken-3" @click="navigateTo({name: 'details'})" dark>View Details</v-btn>
 
+                </Panel>
                 <br>
             </div>
         </v-flex>
@@ -61,76 +62,76 @@ export default {
                     items: [
                         {
                             itemName: 'TFO 5/6, 9ft',
-                            image: 'http://www.burfish.com/Merchant2/graphics/00000001/bvk_nxt_combo_tfo.jpg'
+                            image: 'https://via.placeholder.com/150'
                         }, 
                         {
                             itemName: 'Simms Freestone Waders',
-                            image: 'http://flyandlure.org/images/uploads/large/b02d79bb02d6fe7337e141ae51e4c273.jpg'
+                            image: 'https://via.placeholder.com/150'
                         }, 
                         {
                             itemName: 'Simms Freestone Boots',
-                            image: 'https://www.theflystop.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/B/T/BTKA_15472505031762176_aba661d9602436bc24300ac735cf37.jpg'
+                            image: 'https://via.placeholder.com/150'
                         }]
                 },
                 {
-                    title: 'The Green Mile',
+                    title: 'Test3',
                     activity: 'Golf',
                     description: 'I suck at golf.  Why do I continue to embarass myself by playing?  It is a stupid game for old people!',
                     items: [
                         {
                             itemName: 'Driver',
-                            image: 'https://img-aws.ehowcdn.com/750x428p/photos.demandstudios.com/getty/article/149/63/120765301.jpg'
+                            image: 'https://via.placeholder.com/150'
                         }, 
                         {
                             itemName: 'Putter',
-                            image: 'https://side-saddle-putting.com/wp-content/uploads/2017/11/GP-ball-pickup-2-shop-292k-1.jpg'
+                            image: 'https://via.placeholder.com/150'
                         }, 
                         {
                             itemName: 'Irons',
-                            image: 'https://imgs.2ndswing.com/images/clean-product/large/G410%20NEW%20STS.jpg'
+                            image: 'https://via.placeholder.com/150'
                         }]                  
                 },
                 {
-                    title: 'Gridiron Gang',
-                    activity: 'Football',
+                    title: 'Test2',
+                    activity: 'Golf',
                     description: 'I suck at golf.  Why do I continue to embarass myself by playing?  It is a stupid game for old people!',
                     items: [
                         {
-                            itemName: 'XTECH Pads',
-                            image: 'https://static1.squarespace.com/static/5554d0bae4b00483b17de010/t/5c4cad017ba7fc11fdd20138/1548528972069/SuperSkill_Back_Black.jpg?format=500w'
+                            itemName: 'Driver',
+                            image: 'https://via.placeholder.com/150'
                         }, 
                         {
-                            itemName: 'Riddell',
-                            image: 'https://www.chicagomag.com/Chicago-Magazine/January-2018/Riddell-Football-Helmets-InSite/helmet-900.jpg'
+                            itemName: 'Putter',
+                            image: 'https://via.placeholder.com/150'
                         }, 
                         {
-                            itemName: 'OBJs',
-                            image: 'https://sneakerfreaker-cdn.s3-accelerate.amazonaws.com/image/nike-air-force-1-utility-obj-cleat-red-1.jpg?mtime=20181127042849'
+                            itemName: 'Irons',
+                            image: 'https://via.placeholder.com/150'
                         }]                    
                 },
                 {
-                    title: '2K Gear',
-                    activity: 'Basketball',
+                    title: 'Test1',
+                    activity: 'Golf',
                     description: 'I suck at golf.  Why do I continue to embarass myself by playing?  It is a stupid game for old people!',
                     items: [
                         {
-                            itemName: 'Nike Aeroswift 2 in 1 3QT',
-                            image: 'https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201703/15/00199440603787____1__640x640.jpg'
+                            itemName: 'Driver',
+                            image: 'https://via.placeholder.com/150'
                         }, 
                         {
-                            itemName: 'Kyrie 5',
-                            image: 'https://www.fitmysole.com/wp-content/uploads/2018/11/2018-Nike-Kyrie-5-Galaxy-Multi-Color-AO2918-900-For-Sale.jpg'
+                            itemName: 'Putter',
+                            image: 'https://via.placeholder.com/150'
                         }, 
                         {
-                            itemName: 'Nike Gym Club',
-                            image: 'https://www.shoecarnival.com/dw/image/v2/BBSZ_PRD/on/demandware.static/-/Sites-scvl-master-catalog/default/dwf4ba0533/88273_186950_1.jpg?sw=1694&sh=1999&sm=fit'
+                            itemName: 'Irons',
+                            image: 'https://via.placeholder.com/150'
                         }]                    
                 }
             ]
         }
     },
     methods: {
-        navigateTo (route) {
+         navigateTo (route) {
             this.$router.push(route)
         }
     },
@@ -141,12 +142,5 @@ export default {
 </script>
 
 <style scoped>
-    .item-name {
-        color: white;
-        text-shadow: -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;
-    }
 
 </style>
