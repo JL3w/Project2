@@ -2,8 +2,7 @@
    <v-toolbar fixed class="deep-orange darken-3" dark>
        <v-toolbar-title class="mr-4">
            <span class="home" @click="navigateTo({name: 'root'})">
-                <img class="logo" src="../assets/LoadOut-L.png" @click="navigateTo({name: 'root'})">
-                </img>
+                Loadout
            </span>
        </v-toolbar-title>
 
@@ -40,7 +39,6 @@
 </template>
 
 <script>
-import AuthPlugin from "../plugins/auth";
 export default {
   name: "Header",
   methods: {
@@ -74,9 +72,5 @@ export default {
 
     .home:hover {
         font-weight: bolder;
-    }
-
-    .logo {
-      height: 20px;
     }
 </style>
