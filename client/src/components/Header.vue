@@ -2,7 +2,8 @@
    <v-toolbar fixed class="deep-orange darken-3" dark>
        <v-toolbar-title class="mr-4">
            <span class="home" @click="navigateTo({name: 'root'})">
-                Loadout
+                <img class="logo" src="../assets/LoadOut-L.png" @click="navigateTo({name: 'root'})">
+                </img>
            </span>
        </v-toolbar-title>
 
@@ -73,5 +74,9 @@ export default {
 
     .home:hover {
         font-weight: bolder;
+    }
+
+    .logo {
+      height: 20px;
     }
 </style>
