@@ -16,7 +16,7 @@
             </v-btn>
             <div v-for="loadout in loadouts" :key="loadout.title">
 
-                <Panel :title='loadout.activity'>
+                <Panel :title='loadout.activity' id="loadout">
                     <h2>{{loadout.title}}</h2>
                     <p>{{loadout.description}}</p>
 
@@ -75,7 +75,7 @@ export default {
                 {
                     title: 'The Green Mile',
                     activity: 'Golf',
-                    description: 'I suck at golf.  Why do I continue to embarass myself by playing?  It is a stupid game for old people!',
+                    description: 'A driver for long shots, a putter for the greens, and irons for the approach.',
                     items: [
                         {
                             itemName: 'Driver',
@@ -93,7 +93,7 @@ export default {
                 {
                     title: 'Gridiron Gang',
                     activity: 'Football',
-                    description: 'I suck at golf.  Why do I continue to embarass myself by playing?  It is a stupid game for old people!',
+                    description: 'Top of the line pads, helmet, and cleats to keep you at the top of your game.',
                     items: [
                         {
                             itemName: 'XTECH Pads',
@@ -111,7 +111,7 @@ export default {
                 {
                     title: '2K Gear',
                     activity: 'Basketball',
-                    description: 'I suck at golf.  Why do I continue to embarass myself by playing?  It is a stupid game for old people!',
+                    description: 'Everything you need to ball out and drop a triple-double.',
                     items: [
                         {
                             itemName: 'Nike Aeroswift 2 in 1 3QT',
@@ -148,5 +148,7 @@ export default {
             -1px 1px 0 #000,
             1px 1px 0 #000;
     }
-
+    #loadout {
+        min-width: 800px;
+    }
 </style>
