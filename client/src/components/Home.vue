@@ -32,8 +32,8 @@ import Panel from '@/components/Panel'
 export default {
     data () {
         return {
+          isAuthenticated: false,
           items: [
-
               'https://images.unsplash.com/photo-1550344681-a4572846afca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80'
             ,
               'https://images.unsplash.com/photo-1504671496180-901d79454749?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
@@ -50,14 +50,30 @@ export default {
           ]
         }
     },
+    async created() {
+      try {
+        await this.$auth.renewTokens();
+     } catch (e) {
+        console.log(e);
+      }
+    },
     components: {
         Panel
     },
     methods: {
-
-        navigateTo (route) {
-            this.$router.push(route)
-        }
+      login() {
+        this.$auth.login();
+      },
+      logout() {
+        this.$auth.logOut();
+      },
+      handleLoginEvent(data) {
+        this.isAuthenticated = data.loggedIn;
+        this.profile = data.profile;
+      },
+      navigateTo (route) {
+          this.$router.push(route)
+       }
     }
     
 // SERVER CODE GOES HERE //
