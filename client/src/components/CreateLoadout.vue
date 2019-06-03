@@ -2,7 +2,7 @@
     <v-layout column>
         <v-flex>
             <br>
-            <v-btn class="light-green accent-4 mb-3 mr-3" 
+            <!-- <v-btn class="light-green accent-4 mb-3 mr-3" 
                 slot="action"
                 @click="addField" 
                 dark 
@@ -11,7 +11,7 @@
                 bottom
                 right
                 large >
-                <v-icon>add</v-icon>
+                <v-icon>add</v-icon> -->
             </v-btn>
             <Panel title="New Loadout">
                 <br>
@@ -31,61 +31,62 @@
                     solo
                 ></v-text-field>
                 <v-text-field light
-                    v-model="loadout.items.item[0].name"
-                    placeholder="Item"
+                    v-model="loadout.items[0].name"
+                    placeholder="Item 1"
                     solo
                 >
                 </v-text-field>
                 <v-text-field light
-                    v-model="loadout.items.item[0].imageURL"
-                    placeholder="Image URL"
+                    v-model="loadout.items[0].imageURL"
+                    placeholder="Image URL 1"
                     solo
                 ></v-text-field>
                 <v-text-field light
-                    v-model="loadout.items.item[1].name"
-                    placeholder="Item"
+                    v-model="loadout.items[1].name"
+                    placeholder="Item 2"
                     solo
                 >
                 </v-text-field>
                 <v-text-field light
-                    v-model="loadout.items.item[1].imageURL"
-                    placeholder="Image URL"
+                    v-model="loadout.items[1].imageURL"
+                    placeholder="Image URL 2"
                     solo
                 ></v-text-field>
-                <v-btn class="deep-orange darken-3" @click="addRow" dark>Create</v-btn>
                 <v-text-field light
-                    v-model="loadout.items.item[2].name"
-                    placeholder="Item"
+                    v-model="loadout.items[2].name"
+                    placeholder="Item 3"
                     solo
                 >
                 </v-text-field>
                 <v-text-field light
-                    v-model="loadout.items.item[2].imageURL"
-                    placeholder="Image URL"
+                    v-model="loadout.items[2].imageURL"
+                    placeholder="Image URL 3"
                     solo
                 ></v-text-field>
                 <v-text-field light
-                    v-model="loadout.items.item[3].name"
-                    placeholder="Item"
+                    v-model="loadout.items[3].name"
+                    placeholder="Item 4"
                     solo
                 >
                 </v-text-field>
                 <v-text-field light
-                    v-model="loadout.items.item[3].imageURL"
-                    placeholder="Image URL"
+                    v-model="loadout.items[3].imageURL"
+                    placeholder="Image URL 4"
                     solo
                 ></v-text-field>
                 <v-text-field light
-                    v-model="loadout.items.item[4].name"
-                    placeholder="Item"
+                    v-model="loadout.items[4].name"
+                    placeholder="Item 5"
                     solo
                 >
                 </v-text-field>
                 <v-text-field light
-                    v-model="loadout.items.item[4].imageURL"
-                    placeholder="Image URL"
+                    v-model="loadout.items[4].imageURL"
+                    placeholder="Image URL 5"
                     solo
                 ></v-text-field>
+                                <v-btn class="deep-orange darken-3" @click="create" dark>Create</v-btn>
+
             </Panel>
         </v-flex>
     </v-layout>
@@ -101,36 +102,40 @@ export default {
                 title: null,
                 activity: null,
                 description: null,
-                items: {
-                    item: {
+                items: [
+                    {
                         name: null,
                         imageURL: null,
                     },
-                    item: {
+                    {
                         name: null,
                         imageURL: null,
                     },
-                    item: {
+                    {
                         name: null,
                         imageURL: null,
                     },
-                    item: {
+                    {
                         name: null,
                         imageURL: null,
                     },
-                    item: {
+                    {
                         name: null,
                         imageURL: null,
                     }
+                ]
 
-                }
+                },
+              
             }
-        }
     },
     methods: {
         create() {
             // API code
         },
+        addRow() {
+            //
+        }
     },
     components: {
         Panel

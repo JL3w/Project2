@@ -39,6 +39,7 @@
 </template>
 
 <script>
+import AuthPlugin from "../plugins/auth";
 export default {
   name: "Header",
   methods: {
