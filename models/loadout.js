@@ -3,7 +3,7 @@ module.exports = function(sequelize, DataTypes) {
     name: DataTypes.STRING,
     sport: DataTypes.STRING,
     description: DataTypes.TEXT,
-    userID: DataTypes.STRING
+    // userID: DataTypes.STRING
     // defaultvalue: 
   });
 
