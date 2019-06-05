@@ -9,7 +9,9 @@ module.exports = function(sequelize, DataTypes) {
 
   Loadout.associate = (models) => {
     Loadout.hasMany(models.Gear);
+    Loadout.belongsTo(models.Profile);
   };
+
 
 
   return Loadout;

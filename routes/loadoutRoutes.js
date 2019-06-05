@@ -17,4 +17,23 @@ module.exports = function(app) {
       res.json(dbLoadout);
     });
   });
+
+  app.get("/api/loadouts/:id", function(req, res){
+    db.Loadout.findOne({where:{id:req.params.id}})
+    .then(function(loadout){
+      // res.json(loadout)
+      loadout.getGears()
+      .then(function(loadoutGear){
+        // res.json(loadoutGear)
+        const dbresults = loadout.dataValues;
+        const gearResults = [];
+        for (let i = 0; i<loadoutGear.length; i++){
+          gearResults.push(loadoutGear[i].dataValues)
+        }
+        dbresults.gearDetails=gearResults;
+        console.log(dbresults)
+        res.json(dbresults)
+      })
+    })
+  })
 };
