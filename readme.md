@@ -1,29 +1,28 @@
-# Create Vue Express App
+# LoadOuts
 
-## About This Boilerplate
+A simple MEVN app that allows users to create and share preferred sporting gear, and sort by categories and other things. (WIP)
 
-This setup allows for a Node/Express/Vue app which can be easily deployed to Heroku.
 
-The front-end Vue app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+## Deployment
 
-## Starting the app locally
+https://bnhproject2.herokuapp.com/
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+## Tech Stack
 
-```
-npm install
-```
+- node.js https://nodejs.org/en/docs/
+- express https://expressjs.com/en/guide/routing.html
+- mysql https://dev.mysql.com/doc/
+- sequelize http://docs.sequelizejs.com/
+- auth0 https://auth0.com/docs/
+- Vue.js https://vuejs.org/v2/guide/
+- travis.ci https://docs.travis-ci.com/
+- Heroku https://devcenter.heroku.com/
+- Google https://developers.google.com/identity/protocols/OpenIDConnect
 
-This should install node modules within the server and the client folder.
 
-After both installations complete, run the following command in your terminal:
+## Authors
 
-```
-npm start
-```
-
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+* **Andrew Hennesen**  
+* **Paul Nelson** 
+* **Joshua Lewis** 
+* **LeShwan Edouard**
