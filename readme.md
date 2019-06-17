@@ -26,3 +26,6 @@ https://bnhproject2.herokuapp.com/
 * **Paul Nelson** 
 * **Joshua Lewis** 
 * **LeShwan Edouard**
+
+For this project the greatest challenge by far was coordinating our issue estimations and properly forming requirements / planning and distributing the work load. This was an issue that we did not overcome in the short time frame that we had, but was a learning experience in and of itself. Full functionallity for LoadOuts will require a concerted effort when 70 hours of computing a week is not an external requirement. 
+c'est la vie
